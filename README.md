@@ -34,7 +34,7 @@ This project aims to develop effective language model attack templates through p
 ### 3. Distillation Training (`Llama-DL-Bert.py`)
 - **Functionality**: Trains a BERT model (student model) via knowledge distillation to mimic the behavior of a LLaMA model (teacher model), while optimizing attack template generation.
 - **Configuration**:
-  - GPT-4o API Key: GPT4O_API_KEY = "sk-zJo23510c5b1fc65f25d03eb2ecf35319224b979250uyShQ"
+  - GPT-4o API Key: GPT4O_API_KEY = ""
   - Teacher Model: LLaMA (pre-trained weights require a specified path).
   - Student Model: BERT (bert-base-uncased).
   - Attack Target Model: Vicuna (via Ollama API).
