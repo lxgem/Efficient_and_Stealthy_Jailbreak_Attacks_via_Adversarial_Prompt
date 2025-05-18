@@ -41,16 +41,16 @@ This project aims to develop effective language model attack templates through p
 - **Input**:
   - Instruction files: JSON format, containing an "instruction" field.
   - Template files: JSON format, preferably using filtered templates.
-- **Output**: Distillation-trained BERT model weights and statistics (JSON format).
-- **Process**:
+-Output: Distillation-trained BERT model weights and statistics (JSON format).
+- Process:
   1. Load instructions and templates, randomly combining them to generate prompts.
   2. Process inputs using BERT tokenizer, combining with LLaMA to generate distillation samples.
   3. Train using the RAdam optimizer (lr=1e-3 to 1e-2) and CosineAnnealingLR scheduler.
   4. Evaluate response harmfulness using the GPT-4o API, recording attack success and harmfulness rates.
 
 ## Environment Requirements
-- **Python Version**: 3.8+
-- **Dependencies**:
+- Python Version: 3.8+
+- Dependencies**:
   - transformers
   - peft
   - torch
@@ -59,7 +59,5 @@ This project aims to develop effective language model attack templates through p
   - pandas
   - numpy
   - tqdm
-- **External Services**:
-  - Ollama: Runs Llama2 and Vicuna models (http://127.0.0.1:11434).
-  - GPT-4o API: Used for harmfulness evaluation, requires a valid API key.
-- **Hardware**: GPU with CUDA support recommended for faster training.
+
+- Hardware: GPU with CUDA support recommended for faster training.
